@@ -18,9 +18,11 @@ let questions = [
     },
 ];
 
+let currentQuestion;
+
 function askQuestion () {
     let randomIndex = Math.floor(Math.random() * questions.length);
-    let currentQuestion = questions[randomIndex];
+    currentQuestion = questions[randomIndex];
 
     let buttons = shuffle([nappi1, nappi2, nappi3, nappi4]);
     buttons[0].innerHTML = currentQuestion.rightAnswer;
@@ -34,7 +36,8 @@ function askQuestion () {
 askQuestion();
 
 function answerHandler() {
-    console.log("Terve");
+    answerLabel.innerHTML = "Vastaus oli " + currentQuestion.rightAnswer;
+    askQuestion();
 }
 
 function shuffle(a) {
@@ -47,5 +50,3 @@ function shuffle(a) {
     }
     return a;
 }
-
-console.log(shuffle([1,2,3,4,5])); //shuffle function testaus
