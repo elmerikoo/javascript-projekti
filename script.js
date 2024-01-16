@@ -44,7 +44,8 @@ let questions = [
     },
     {
         question: "Mikä on Intian pääkaupunki?",
-        rightAnswer: "Uusi-Delhi",        wrongs: ["Mumbai", "Kolkata", "Bangalore", "Chennai"]
+        rightAnswer: "Uusi-Delhi",        
+        wrongs: ["Mumbai", "Kolkata", "Bangalore", "Chennai"]
     },
     {
         question: "Mikä on Kanadan pääkaupunki?",
@@ -95,4 +96,17 @@ function shuffle(a) {
         a[j] = x;
     }
     return a;
+}
+
+//pistelaskuri
+let score = 0;
+
+document.getElementById("lisaaPiste").addEventListener("click", function() {
+    score++;
+    document.getElementById("pisteet").innerHTML = "Pisteet: " + score;
+});
+
+if (score === 10) {
+    alert("Tämä on ilmoitus. Sivu päivittyy heti tämän jälkeen.");
+    location.reload();
 }

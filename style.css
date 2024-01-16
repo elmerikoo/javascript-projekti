@@ -6,8 +6,7 @@ body {
 h1 {
     color: white;
     padding-top: 200px;
-    font-family: Arial, Helvetica, sans-serif;
-}
+    font-family: Arial, Helvetica, sans-serif;}
 
 h2 {
     color: white;
@@ -25,4 +24,12 @@ button {
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
     margin: 10px;
+}
+
+
+#pisteet {
+    margin-top: 20px;
+    font-size: 30px;
+    color:aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
 }
