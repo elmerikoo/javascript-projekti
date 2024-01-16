@@ -90,7 +90,7 @@ function askQuestion () {
 }
 
 function answerHandler() {
-    answerLabel.innerHTML = "Vastaus oli " + currentQuestion.rightAnswer;
+    answerLabel.innerHTML = "Edellisen maan pääkaupunki oli  " + currentQuestion.rightAnswer;
     attempts--;
     askQuestion();
 }

@@ -1,35 +1,114 @@
 body {
     text-align: center;
     background-color: black;
+    z-index: 1;
+    background: linear-gradient(-45deg, #0a0f0b, #1b263b, #3d5a80, #1b263b, #0a0f0b);
+    background-size: 400% 400%;
+    animation: gradient-shift 15s ease infinite;
 }
+
+/* Animaatio määritelmä */
+@keyframes gradient-shift {
+    0%, 100% {
+    background-position: 0% 50%;
+    }
+    50% {
+    background-position: 100% 50%;
+    }
+    }
 
 h1 {
-    color: white;
     padding-top: 200px;
-    font-family: Arial, Helvetica, sans-serif;}
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    text-shadow: 4px 3px 0 #000000;
+}
 
 h2 {
-    color: white;
     padding-top: 200px;
     font-family: Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    text-shadow: 4px 3px 0 #000000;
 }
+
 
 button {
-    width: 200px;
-    height: 44px;
-    border-radius: 8px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    font-size: 20px;
+    outline: 0;
     font-family: Arial, Helvetica, sans-serif;
-    margin: 10px;
+    grid-gap: 8px;
+    align-items: center;
+    background-color: #ff4742;
+    color: #ffffff;
+    border: 1px solid #000;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-flex;
+    flex-shrink: 0;
+    font-size: 16px;
+    gap: 8px;
+    justify-content: center;
+    line-height: 1.5;
+    overflow: hidden;
+    padding: 12px 16px;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    transition: all .14s ease-out;
+    white-space: nowrap;
+    font-size: 16px;
+    height: 44px;
+    width: 200px;
+    margin: 13px;
+    font-weight: 800;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 0px 0px 12px 6px rgba(0,0,0,0.66); 
+    box-shadow: 0px 10px 13px -7px #000000, 0px 0px 12px 6px rgba(0,0,0,0.66);
 }
 
+:focus-visible{
+    outline-offset: 1px;
+}
+
+
+button:hover {
+    box-shadow: 4px 4px 0 #000;
+    transform: translate(-4px,-4px);
+    background-color:#ff4742; /* Vaihdetaan taustaväri valkoiseksi */
+    color: #000;
+}
 
 #pisteet {
     margin-top: 20px;
     font-size: 30px;
-    color:aliceblue;
     font-family: Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    text-shadow: 4px 3px 0 #000000;
+}
+
+.instructions-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.instruction-bubble {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 50px;
+    color: rgb(0, 0, 0);
+    font-family: Arial, sans-serif;
+    flex: 1;
+    min-width: 150px;
+    max-width: 300px;
+    margin: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 0px 4px 43px 20px rgba(0,0,0,0.68); 
+    box-shadow: 0px 10px 13px -7px #000000, 0px 4px 43px 20px rgba(0,0,0,0.68);
+}
+
+.rules {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    text-shadow: 4px 3px 0 #000000;
+    font-size: 30px;
 }
