@@ -6,6 +6,7 @@ const nappi3 = document.getElementById("nappi3");
 const nappi4 = document.getElementById("nappi4");
 const nappi5 = document.getElementById("nappi5");
 
+
 let questions = [
     {
         question: "Mikä on Suomen pääkaupunki?",
@@ -65,6 +66,8 @@ let questions = [
 ];
 
 let currentQuestion;
+let score = 0;
+let attempts = 15;
 
 function askQuestion () {
     let randomIndex = Math.floor(Math.random() * questions.length);
@@ -78,12 +81,17 @@ function askQuestion () {
     buttons[4].innerHTML = currentQuestion.wrongs[3];
 
     questionLabel.innerHTML = currentQuestion.question;
-}
 
-askQuestion();
+    if (attempts <= 0) {
+        alert("Hävisit pelin. Yritä uudelleen!");
+        location.reload();
+        return;
+    }
+}
 
 function answerHandler() {
     answerLabel.innerHTML = "Vastaus oli " + currentQuestion.rightAnswer;
+    attempts--;
     askQuestion();
 }
 
@@ -98,15 +106,17 @@ function shuffle(a) {
     return a;
 }
 
-//pistelaskuri
-let score = 0;
-
 document.getElementById("lisaaPiste").addEventListener("click", function() {
     score++;
     document.getElementById("pisteet").innerHTML = "Pisteet: " + score;
+
+    if (score >= 10) {
+        alert("Voitit pelin! Onneksi olkoon!");
+        location.reload();
+    } else {
+        askQuestion();
+    }
 });
 
-if (score === 10) {
-    alert("Tämä on ilmoitus. Sivu päivittyy heti tämän jälkeen.");
-    location.reload();
-}
+askQuestion();
+
