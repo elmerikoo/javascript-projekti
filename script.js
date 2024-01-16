@@ -6,7 +6,6 @@ const nappi3 = document.getElementById("nappi3");
 const nappi4 = document.getElementById("nappi4");
 const nappi5 = document.getElementById("nappi5");
 
-
 let questions = [
     {
         question: "Mikä on Suomen pääkaupunki?",
@@ -62,7 +61,122 @@ let questions = [
         question: "Mikä on Venäjän pääkaupunki?",
         rightAnswer: "Moskova",
         wrongs: ["Pietari", "Novosibirsk", "Jekaterinburg", "Kazan"]
-    }
+    },
+    {
+        question: "Mikä on Yhdysvaltojen pääkaupunki?",
+        rightAnswer: "Washington D.C.",
+        wrongs: ["New York", "Los Angeles", "Chicago", "San Francisco"]
+    },
+    {
+        question: "Mikä on Japanin pääkaupunki?",
+        rightAnswer: "Tokio",
+        wrongs: ["Osaka", "Kyoto", "Nagoya", "Sapporo"]
+    },
+    {
+        question: "Mikä on Ranskan pääkaupunki?",
+        rightAnswer: "Pariisi",
+        wrongs: ["Marseille", "Lyon", "Toulouse", "Nizza"]
+    },
+    {
+        question: "Mikä on Etelä-Afrikan pääkaupunki?",
+        rightAnswer: "Pretoria",
+        wrongs: ["Johannesburg", "Kapkaupunki", "Durban", "Port Elizabeth"]
+    },
+    {
+        question: "Mikä on Meksikon pääkaupunki?",
+        rightAnswer: "México",
+        wrongs: ["Guadalajara", "Monterrey", "Puebla", "Cancún"]
+    },
+    {
+        question: "Mikä on Egyptin pääkaupunki?",
+        rightAnswer: "Kairo",
+        wrongs: ["Aleksandria", "Giza", "Luxor", "Aswan"]
+    },
+    {
+        question: "Mikä on Etelä-Korean pääkaupunki?",
+        rightAnswer: "Soul",
+        wrongs: ["Busan", "Incheon", "Daegu", "Gwangju"]
+    },
+    {
+        question: "Mikä on Thaimaan pääkaupunki?",
+        rightAnswer: "Bangkok",
+        wrongs: ["Chiang Mai", "Phuket", "Pattaya", "Krabi"]
+    },
+    {
+        question: "Mikä on Argentiinan pääkaupunki?",
+        rightAnswer: "Buenos Aires",
+        wrongs: ["Córdoba", "Rosario", "Mendoza", "La Plata"]
+    },
+    {
+        question: "Mikä on Nigerian pääkaupunki?",
+        rightAnswer: "Abuja",
+        wrongs: ["Lagos", "Kano", "Ibadan", "Benin City"]
+    },
+    {
+        question: "Mikä on Uuden-Seelannin pääkaupunki?",
+        rightAnswer: "Wellington",
+        wrongs: ["Auckland", "Christchurch", "Hamilton", "Tauranga"]
+    },
+    {
+        question: "Mikä on Iranin pääkaupunki?",
+        rightAnswer: "Teheran",
+        wrongs: ["Mashhad", "Isfahan", "Shiraz", "Tabriz"]
+    },
+    {
+        question: "Mikä on Indonesian pääkaupunki?",
+        rightAnswer: "Jakarta",
+        wrongs: ["Surabaya", "Bandung", "Medan", "Bali"]
+    },
+    {
+        question: "Mikä on Israelin pääkaupunki?",
+        rightAnswer: "Jerusalem",
+        wrongs: ["Tel Aviv", "Haifa", "Eilat", "Nazareth"]
+    },
+    {
+        question: "Mikä on Irlannin pääkaupunki?",
+        rightAnswer: "Dublin",
+        wrongs: ["Cork", "Galway", "Limerick", "Belfast"]
+    },
+    {
+        question: "Mikä on Viron pääkaupunki?",
+        rightAnswer: "Tallinna",
+        wrongs: ["Tartto", "Pärnu", "Narva", "Viljandi"]
+    },
+    {
+        question: "Mikä on Marokon pääkaupunki?",
+        rightAnswer: "Rabat",
+        wrongs: ["Casablanca", "Marrakech", "Fes", "Tangier"]
+    },
+    {
+        question: "Mikä on Tanskan pääkaupunki?",
+        rightAnswer: "Kööpenhamina",
+        wrongs: ["Aarhus", "Odense", "Aalborg", "Esbjerg"]
+    },
+    {
+        question: "Mikä on Kroatian pääkaupunki?",
+        rightAnswer: "Zagreb",
+        wrongs: ["Split", "Dubrovnik", "Rijeka", "Zadar"]
+    },
+    {
+        question: "Mikä on Kenian pääkaupunki?",
+        rightAnswer: "Nairobi",
+        wrongs: ["Mombasa", "Kisumu", "Nakuru", "Eldoret"]
+    },
+    {
+        question: "Mikä on Kolumbian pääkaupunki?",
+        rightAnswer: "Bogotá",
+        wrongs: ["Medellín", "Cali", "Barranquilla", "Cartagena"]
+    },
+    {
+        question: "Mikä on Kuuban pääkaupunki?",
+        rightAnswer: "Havanna",
+        wrongs: ["Santiago de Cuba", "Camagüey", "Holguín", "Guantánamo"]
+    },
+    {
+        question: "Mikä on Unkarin pääkaupunki?",
+        rightAnswer: "Budapest",
+        wrongs: ["Debrecen", "Szeged", "Miskolc", "Pécs"]
+    },
 ];
 
 let currentQuestion;
