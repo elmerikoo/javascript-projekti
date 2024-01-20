@@ -227,8 +227,6 @@ document.getElementById("lisaaPiste").addEventListener("click", function() {
     if (score >= 10) {
         alert("Voitit pelin! Onneksi olkoon!");
         location.reload();
-    } else {
-        askQuestion();
     }
 });
 
