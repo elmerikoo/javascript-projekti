@@ -196,15 +196,18 @@ function askQuestion () {
 
     questionLabel.innerHTML = currentQuestion.question;
 
-    if (attempts <= 0) {
+    if (attempts < 0) {
         alert("Hävisit pelin. Yritä uudelleen!");
         location.reload();
         return;
     }
+
+    document.getElementById("arvauksiaJaljella").innerHTML = "Arvauksia jäljellä: " + attempts;
 }
 
 function answerHandler() {
     answerLabel.innerHTML = "Edellisen maan pääkaupunki oli  " + currentQuestion.rightAnswer;
+    document.getElementById("arvauksiaJaljella").innerHTML = "Arvauksia jäljellä: " + attempts;
     attempts--;
     askQuestion();
 }
@@ -223,6 +226,7 @@ function shuffle(a) {
 document.getElementById("lisaaPiste").addEventListener("click", function() {
     score++;
     document.getElementById("pisteet").innerHTML = "Pisteet: " + score;
+    document.getElementById("arvauksiaJaljella").innerHTML = "Arvauksia jäljellä: " + attempts;
 
     if (score >= 10) {
         alert("Voitit pelin! Onneksi olkoon!");
