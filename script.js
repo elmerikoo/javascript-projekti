@@ -226,8 +226,7 @@ function shuffle(a) {
 document.getElementById("lisaaPiste").addEventListener("click", function() {
     score++;
     document.getElementById("pisteet").innerHTML = "Pisteet: " + score;
-    document.getElementById("arvauksiaJaljella").innerHTML = "Arvauksia jäljellä: " + attempts;
-
+    
     if (score >= 10) {
         alert("Voitit pelin! Onneksi olkoon!");
         location.reload();
